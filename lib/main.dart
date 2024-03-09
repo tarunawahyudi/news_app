@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:news_app/detail_page.dart';
 import 'package:news_app/model/article.dart';
-import 'package:news_app/style.dart';
+import 'package:news_app/common/style.dart';
 import 'package:news_app/widgets/custom_scaffold.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
-import 'list_page.dart';
+import 'home_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -38,9 +38,9 @@ class MyApp extends StatelessWidget {
           )
         )
       ),
-      initialRoute: NewsListPage.routeName,
+      initialRoute: HomePage.routeName,
       routes: {
-        NewsListPage.routeName : (context) => const NewsListPage(),
+        HomePage.routeName : (context) => const HomePage(),
         ArticleDetailPage.routeName : (context) => ArticleDetailPage(
           article: ModalRoute.of(context)?.settings.arguments as Article,
         ),
